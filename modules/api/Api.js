@@ -8,7 +8,7 @@ export default {
 			.end(function(err, res) {
 			// log the error
 			if (err) {
-			  console.log(err);
+				console.log(err);
 			} else {
 				var content = res.body
 				callback(content)
@@ -22,7 +22,7 @@ export default {
 			.end(function(err, res) {
 			// log the error
 			if (err) {
-			  console.log(err);
+				console.log(err);
 			} else {
 				var content = res.body
 				callback(content)
