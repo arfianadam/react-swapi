@@ -10,7 +10,7 @@ import store from './store'
 const history = syncHistoryWithStore(browserHistory, store)
 
 render(
-	<Provider store={store}>
+	<Provider store={ store }>
 		<Router routes={ routes } history={ history } />
 	</Provider>,
 	document.getElementById('app')

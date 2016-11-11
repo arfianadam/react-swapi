@@ -7,7 +7,7 @@ class AppContainer extends React.Component {
   }
   render() {
     return (
-			<div className={styles.AppContainer}>
+			<div className={ styles.AppContainer }>
 				{/* Your code here */}
 			</div>
     )
