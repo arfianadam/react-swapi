@@ -5,6 +5,6 @@ import AppContainer from '../components/smart/AppContainer'
 
 module.exports = (
 	<Route>
-		<Route path="/" component={AppContainer} />
+  	<Route path="/" component={AppContainer} />
 	</Route>
 )
