@@ -1,4 +1,8 @@
 # react-swapi
+
+## Under maintenance
+I am going to implement Redux, other improvements, and implement better Javascript practices.
+
 This is a fun project made by me, Arfian Adam. I used Star Wars API collection at [Swapi.co](http://swapi.co). This project is built on React without any Redux implementation like Flux to keep it simple and easy to understand. Feel free to make suggestions.
 
 Contact me at [contact@arfianadam.com](mailto:contact@arfianadam.com "Contact me!")
