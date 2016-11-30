@@ -13,7 +13,7 @@
   "author": "Arfian Adam",
   "license": "GPL-3.0",
   "devDependencies": {
-  	"autoprefixer-loader": "^3.2.0",
+    "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.13.2",
@@ -58,7 +58,8 @@
     "redux-logger": "^2.7.4",
     "redux-promise-middleware": "^4.1.0",
     "redux-thunk": "^2.1.0",
-    "superagent": "^2.2.0"
+    "superagent": "^2.2.0",
+    "webpack": "^1.13.3"
   },
   "bugs": {
     "url": "https://github.com/arfianadam/react-swapi/issues"
