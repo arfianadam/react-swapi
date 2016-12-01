@@ -37,21 +37,22 @@ const renderHTML = (Head, appHtml) => {
 	return `
 		<!doctype html public="storage">
 		<html ${Head.htmlAttributes.toString()}>
-		<meta charset=utf-8/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="author" content="Arfian Adam">
-		<link rel="shortcut icon" href="/assets/images/favicon.ico"> 
-		<link rel="apple-itouch-icon" href="/assets/images/favicon.png">
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width', initial-scale='1'>
+		<meta name='author' content='Arfian Adam'>
+		<link rel='shortcut icon' href='/assets/images/favicon.ico'> 
+		<link rel='apple-itouch-icon' href='/assets/images/favicon.png'>
 		<head>
+		
 			${Head.title.toString()}
 			${Head.meta.toString()}
 			${Head.link.toString()}
 
-			<link rel="stylesheet" href=/styles.css>
+			<link rel='stylesheet' href='/styles.css'>
 		</head>
 		<body>
 			<div id=app>${appHtml}</div>
-			<script async src="/index.js"></script>
+			<script async src='/index.js'></script>
 		</body>
 	`
 }
