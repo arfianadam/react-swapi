@@ -4,7 +4,7 @@
 .AppContainer {
 	@include container-responsive;
 
-  .row {
-  	@include make-row
-  }
+	.row {
+		@include make-row
+	}
 }
