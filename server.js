@@ -9,7 +9,7 @@ import { renderToString } from 'react-dom/server'
 import routes from './src/routes'
 
 import { Provider } from 'react-redux'
-import store from './store'
+import store from './src/store'
 
 const app = express()
 
@@ -48,11 +48,11 @@ const renderHTML = (Head, appHtml) => {
 			${Head.meta.toString()}
 			${Head.link.toString()}
 
-			<link rel='stylesheet' href='/styles.css'>
+			<link rel='stylesheet' href='/style.css'>
 		</head>
 		<body>
-			<div id=app>${appHtml}</div>
-			<script async src='/index.js'></script>
+			<div id='react-swapi'>${appHtml}</div>
+			<script async src='/bundle.js'></script>
 		</body>
 	`
 }
