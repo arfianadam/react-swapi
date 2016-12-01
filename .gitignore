@@ -4,3 +4,4 @@ server.bundle.js
 yarn.lock
 yarn-error.log
 npm-debug.log
+.env
