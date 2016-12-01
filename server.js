@@ -43,7 +43,7 @@ const renderHTML = (Head, appHtml) => {
 		<link rel='shortcut icon' href='/assets/images/favicon.ico'> 
 		<link rel='apple-itouch-icon' href='/assets/images/favicon.png'>
 		<head>
-		
+
 			${Head.title.toString()}
 			${Head.meta.toString()}
 			${Head.link.toString()}
@@ -56,3 +56,8 @@ const renderHTML = (Head, appHtml) => {
 		</body>
 	`
 }
+
+let PORT = process.env.PORT || 8080
+app.listen(PORT, function() {
+  console.log('Production Express server running at localhost:' + PORT)
+})
