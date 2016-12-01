@@ -1,3 +1,10 @@
+@import '../../../assets/app';
+@import '../../../assets/mixins';
+
 .AppContainer {
-	/* Your style here */
+	@include container-responsive;
+
+  .row {
+  	@include make-row
+  }
 }

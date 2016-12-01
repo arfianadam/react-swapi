@@ -10,7 +10,7 @@ class AppContainer extends React.Component {
 	render() {
 		return (
 			<div className={ styles.AppContainer }>
-				Hello!!
+				<h1>React SWAPI</h1>
 			</div>
 		)
 	}

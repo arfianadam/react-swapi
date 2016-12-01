@@ -32,21 +32,23 @@ const main = {
 				test: /\.scss$/,
 				loader: extractTextPlugin.extract(
 					'style-loader',
-					combineLoaders([{
-						loader: 'css-loader',
-						query: {
-							minimize: true,
-							modules: true,
-							localIdentName: '[name]-[local]-[hash:base64:5]'
+					combineLoaders([
+						{
+							loader: 'css-loader',
+							query: {
+								minimize: true,
+								modules: true,
+								localIdentName: '[hash:base64:5]'
+							}
+						},{
+							loader: 'sass-loader'
+						},{
+							loader: 'autoprefixer-loader',
+							query: {
+								browsers: 'last 2 versions'
+							}
 						}
-					},{
-						loader: 'sass-loader'
-					},{
-						loader: 'autoprefixer-loader',
-						query: {
-							browsers: 'last 2 versions'
-						}
-					}])
+					])
 				)
 			}
 		]

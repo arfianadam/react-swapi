@@ -1,0 +1,17 @@
+{
+  "name": "react-swapi",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Arfian Adam"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/arfianadam/react-swapi",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
