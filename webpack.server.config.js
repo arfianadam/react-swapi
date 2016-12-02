@@ -15,9 +15,7 @@ const main = {
 		index: path.resolve(__dirname, 'server.js'),
 	},
 	output: {
-		path: publicPath,
-		filename: 'server.bundle.js',
-		publicPath: publicPath
+		filename: 'server.bundle.js'
 	},
 	target: 'node',
 	node: {
@@ -69,7 +67,7 @@ const main = {
 				test: /\.jpg$/,
 				loader: 'file-loader',
 				query: {
-					name: '[hash:base64:5]',
+					name: '[hash:base64:5].[ext]',
 					emitFile: false
 				}
 			}
@@ -86,7 +84,7 @@ const main = {
 			'Promise': 'promise-polyfill',
 			'_': 'lodash',
 		}),
-		new ExtractTextPlugin('style.css')
+		new ExtractTextPlugin('public/style.css')
 	]
 }
 

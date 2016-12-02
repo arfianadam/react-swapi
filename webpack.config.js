@@ -56,7 +56,7 @@ const main = {
 				test: /\.jpg$/,
 				loader: 'file-loader',
 				query: {
-					name: '[hash:base64:5]'
+					name: '[hash:base64:5].[ext]'
 				}
 			}
 		]
@@ -67,9 +67,7 @@ const main = {
 			'Promise': 'promise-polyfill',
 			'_': 'lodash',
 		}),
-		new ExtractTextPlugin('style.css', {
-			publicPath: 'assets/css/'
-		})
+		new ExtractTextPlugin('style.css')
 	]
 }
 
