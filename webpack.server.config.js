@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 const fs = require('fs')
 const merge = require('webpack-merge')
-const extractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const combineLoaders = require('webpack-combine-loaders')
 const env = require('dotenv').config()
 const validate = require('webpack-validator')
@@ -15,6 +15,7 @@ const main = {
 		index: path.resolve(__dirname, 'server.js'),
 	},
 	output: {
+		path: publicPath,
 		filename: 'server.bundle.js',
 		publicPath: publicPath
 	},
@@ -42,8 +43,7 @@ const main = {
 			},
 			{
 				test: /\.scss$/,
-				loader: extractTextPlugin.extract(
-					'style-loader',
+				loader: ExtractTextPlugin.extract(
 					combineLoaders([
 						{
 							loader: 'css-loader',
@@ -52,9 +52,11 @@ const main = {
 								modules: true,
 								localIdentName: '[hash:base64:5]'
 							}
-						},{
+						},
+						{
 							loader: 'sass-loader'
-						},{
+						},
+						{
 							loader: 'autoprefixer-loader',
 							query: {
 								browsers: 'last 2 versions'
@@ -62,6 +64,14 @@ const main = {
 						}
 					])
 				)
+			},
+			{
+				test: /\.jpg$/,
+				loader: 'file-loader',
+				query: {
+					name: '[hash:base64:5]',
+					emitFile: false
+				}
 			}
 		]
 	},
@@ -76,7 +86,7 @@ const main = {
 			'Promise': 'promise-polyfill',
 			'_': 'lodash',
 		}),
-		new extractTextPlugin('style.css')
+		new ExtractTextPlugin('style.css')
 	]
 }
 
