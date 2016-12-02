@@ -1,5 +1,8 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styles from './AppContainer.scss'
+
+import HeaderContainer from '../HeaderContainer'
 
 class AppContainer extends React.Component {
 	constructor(props) {
@@ -10,7 +13,12 @@ class AppContainer extends React.Component {
 	render() {
 		return (
 			<div className={ styles.AppContainer }>
-				<h1>React SWAPI</h1>
+				<Helmet
+					defaultTitle='React SWAPI'
+					titleTemplate='%s - React SWAPI'
+				/>
+				<HeaderContainer/>
+				{ this.props.children }
 			</div>
 		)
 	}
