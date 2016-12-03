@@ -1,0 +1,6 @@
+{
+	"name": "CategoriesList",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./CategoriesList.js"
+}
