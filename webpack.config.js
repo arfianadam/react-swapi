@@ -3,7 +3,7 @@ const path = require('path')
 const merge = require('webpack-merge')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const combineLoaders = require('webpack-combine-loaders')
-const env = require('dotenv').config()
+// const env = require('dotenv').config()
 const validate = require('webpack-validator')
 
 const srcPath = path.join(__dirname, 'src/')
