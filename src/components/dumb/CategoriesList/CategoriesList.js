@@ -11,9 +11,6 @@ class CategoriesList extends React.Component {
 
 	render() {
 		const title = this.props.slug.capitalizeFirstLetter()
-		const style = {
-			backgroundImage: ''
-		}
 		return (
 			<Link to={ '/categories/' + this.props.slug }>
 				<div className={ styles.CategoriesList + ' ' + styles[this.props.slug] }>
