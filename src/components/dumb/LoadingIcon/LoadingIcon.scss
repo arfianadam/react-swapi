@@ -1,0 +1,23 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+$base-line-height: 48px;
+$color: #333;
+$off-white: rgba($color, 0.2);
+$spin-duration: 1s;
+
+.LoadingIcon {
+	margin: 0 auto;
+	border-radius: 50%;
+	width: $base-line-height;
+	height: $base-line-height;
+	border: .5rem solid $off-white;
+	border-top-color: $color;
+	animation: spin $spin-duration infinite linear;
+}
