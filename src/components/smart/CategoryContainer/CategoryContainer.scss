@@ -4,6 +4,10 @@
 	@include container-responsive;
 	padding-bottom: 10rem;
 
+	h1 {
+		margin: 3rem 0;
+	}
+
 	h1, h6 {
 		text-align: center;
 	}

@@ -22,25 +22,13 @@ import LoadingIcon from '../../dumb/LoadingIcon'
 class CategoryContainer extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {
-			page: 1
-		}
 		this._getItems = this._getItems.bind(this)
-		this._nextPage = this._nextPage.bind(this)
 	}
 
 	_getItems() {
 		const { category } = this.props.params
 		const page = this.props.data[category].page
 		this.props.dispatch(getCategory(category, page))
-	}
-
-	_nextPage() {
-		let currentPage = this.state.page
-		currentPage++
-		this.setState({
-			page: currentPage
-		})
 	}
 
 	_waypoint() {
