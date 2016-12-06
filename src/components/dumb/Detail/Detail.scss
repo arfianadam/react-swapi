@@ -1,0 +1,25 @@
+@import '../../../assets/mixins';
+
+.Detail {
+	@include container-responsive;
+
+	.header {
+		margin: 3rem 0;
+		h1, h5 {
+			text-align: center;
+		}
+
+		h5 {
+			margin-top: 0;
+
+			label {
+				display: inline-block;
+				padding: 1rem;
+				border-radius: 5px;
+				color: #aaa;
+				background-color: #f3f3f3;
+			}
+		}
+	}
+
+}
