@@ -12,6 +12,20 @@ export default {
 					if (err) {
 						reject(err)
 					} else {
+						resolve(res.body.results)
+					}
+				})
+		})
+	},
+
+	getItem(category, id) {
+		return new Promise((resolve, reject) => {
+			request
+				.get(url + category+ '/' + id + '/')
+				.end((err, res) => {
+					if (err) {
+						reject(err)
+					} else {
 						resolve(res.body)
 					}
 				})

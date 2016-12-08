@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import _ from 'lodash'
 import styles from './DetailContainer.scss'
 
+import { getItem } from '../../../actions/dataAction'
+
 import Detail from '../../dumb/Detail'
 
 @connect((store) => {
@@ -26,18 +28,20 @@ class DetailContainer extends React.Component {
 		const data = this.props.data[category].data
 		const dataDetail = _.filter(data, { id: parseInt(id) })
 		const isFetched = dataDetail.length > 0 ? true : false
-		if (isFetched) {
-			this.setState({
-				data: dataDetail[0],
-				category: category
-			})
+		console.log(dataDetail)
+		console.log(isFetched)
+		if (!isFetched) {
+			this.props.dispatch(getItem(category, id))
 		}
 	}
 
 	render() {
+		const { category, id } = this.props.params
+		const data = this.props.data[category].data
+		const dataDetail = _.filter(data, { id: parseInt(id) })
 		return (
 			<div className={ styles.DetailContainer }>
-				<Detail data={ this.state.data } category={ this.state.category }/>
+				<Detail data={ dataDetail[0] } category={ category }/>
 			</div>
 		)
 	}
